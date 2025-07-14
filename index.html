@@ -1,0 +1,118 @@
+<div class="container"></div>
+    <h1>MYX Beer</h1>
+    <div class="welcome">
+        Bem-vindo à MYX Beer, sua distribuidora de bebidas! Aproveite nossos combos, bomboniere, vinhos e cervejas especiais.
+    </div>
+    <div class="buttons"></div>
+    <style>
+        body {
+            background: linear-gradient(120deg, #FFD600 0%, #fff 60%, #000 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-image: 
+                linear-gradient(120deg, #FFD600 0%, #fff 60%, #000 100%),
+                url('https://images.unsplash.com/photo-1514361892635-cebb9b6c7ca5?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-blend-mode: lighten;
+            color: #222;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.97);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            padding: 40px 28px;
+            text-align: center;
+        }
+        h1 {
+            color: #FFD600;
+            font-size: 3.2rem;
+            margin-bottom: 16px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 16px #00000055, 0 0 24px #FFD60088;
+            animation: pulse 1.8s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { text-shadow: 2px 2px 16px #00000055, 0 0 24px #FFD60088; }
+            100% { text-shadow: 2px 2px 32px #00000099, 0 0 48px #FFD600cc; }
+        }
+        .welcome {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            color: #222;
+            font-weight: 500;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .btn {
+            background: linear-gradient(90deg, #FFD600 70%, #fff 100%);
+            color: #222;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 32px;
+            font-size: 1.08rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #FFD60044;
+            transition: 
+                background 0.2s, 
+                color 0.2s, 
+                box-shadow 0.2s, 
+                transform 0.15s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #222 70%, #FFD600 100%);
+            color: #FFD600;
+            box-shadow: 0 4px 24px #FFD60099, 0 0 8px #222;
+            transform: scale(1.07);
+        }
+        .cart-btn {
+            background: #222;
+            color: #FFD600;
+            margin-top: 22px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 2px 16px #FFD60055;
+            animation: cart-glow 1.5s infinite alternate;
+        }
+        .cart-btn:hover {
+            background: #FFD600;
+            color: #222;
+            box-shadow: 0 4px 32px #FFD600cc, 0 0 12px #222;
+        }
+        @keyframes cart-glow {
+            0% { box-shadow: 0 2px 16px #FFD60055; }
+            100% { box-shadow: 0 4px 32px #FFD600cc, 0 0 12px #FFD600; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MYX Beer</h1>
+        <div class="welcome">
+            Bem-vindo à MYX Beer, sua distribuidora de bebidas! Aproveite nossos combos, bomboniere, vinhos e cervejas especiais.
+        </div>
+        <div class="buttons">
+            <button class="btn">Combo</button>
+            <button class="btn">Bomboniere</button>
+            <button class="btn">Vinhos</button>
+            <button class="btn">Cerveja</button>
+            <button class="btn" onclick="mostrarQuemSomos()">Quem Somos</button>
+        </div>
+        <button class="btn cart-btn">Carrinho</button>
+    </div>
+    <script>
+function mostrarQuemSomos() {
+    alert('A MYX Beer é uma distribuidora dedicada a oferecer as melhores bebidas, com qualidade, variedade e atendimento especial para você. Nossa missão é proporcionar experiências únicas para nossos clientes!');
+}
+</script>
+</body>
+</html>
